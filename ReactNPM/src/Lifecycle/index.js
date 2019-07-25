@@ -1,11 +1,10 @@
-import { hot } from 'react-hot-loader/root'
 import React from 'react'; 
 
 class Lifecycle extends React.Component { 
 	constructor(props) {
         console.log("constructor");
 		super(props); 
-        this.state = { hello : "World!", date: new Date().toLocaleString() };
+        this.state = { hello : "World!" };
         this.changeState = this.changeState.bind(this);
 	} 
 
@@ -15,9 +14,6 @@ class Lifecycle extends React.Component {
 
 	componentDidMount() { 
         console.log("componentDidMount"); 
-        setInterval(function(){
-            this.setState({date: new  Date().toLocaleString()});
-        }.bind(this), 1000);
 	} 
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -40,13 +36,12 @@ class Lifecycle extends React.Component {
 	render() { 
         console.log("render")
 		return ( 
-			<div> 
+			<div className="flex-item"> 
                 <h1>Hello { this.state.hello }</h1> 
-                <h2><a onClick={this.changeState}>Press Here!</a></h2> 
-                <h3>Current Date and Time :: {this.state.date}</h3>
+                <button className="btn btn-info" onClick={this.changeState}>Change Hello World!</button>
             </div>
         ); 
 	} 
 }
 
-export default hot(Lifecycle);
+export default Lifecycle;

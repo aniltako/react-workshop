@@ -14,10 +14,10 @@ class HotReload extends React.Component {
 
 	render() { 
 		return ( 
-			<div> 
+			<div className="flex-item"> 
                 <h1>Hello { this.state.hello }</h1> 
-                <h2><a onClick={this.changeState}>Hot Reload!!!!</a></h2> 
-                <h3>Current Date and Time :: {this.state.date}</h3>
+                <button onClick={this.changeState}>Hot Reload!!!!</button> 
+                <span>Current Date and Time :: {this.state.date}</span>
             </div>
         ); 
 	} 

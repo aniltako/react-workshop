@@ -1,10 +1,18 @@
 import React from 'react';
 
-function GreetingFunc (props) {
+function FuncComp (props) {
     return <h1> Hello, {props.name}</h1>
 }
 
-class GreetingComp extends React.Component {
+class ClassComp extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            
+        }
+    }
+
     render() {
         return <h1> Hello, {this.props.name}</h1>
     }
@@ -13,9 +21,9 @@ class GreetingComp extends React.Component {
 class ComponentsProps extends React.Component {
     render() {
         return (
-            <div>
-                <GreetingFunc name="Function"/>
-                <GreetingComp name="Component"/> 
+            <div className="flex-item">
+                <FuncComp name="Function Component"/>
+                <ClassComp name="Class Component"/> 
             </div>
         )
     }

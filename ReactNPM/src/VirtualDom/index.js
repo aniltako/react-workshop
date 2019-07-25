@@ -14,9 +14,9 @@ export default class VirtualDom extends React.Component {
 
    	render() { 
 		return ( 
-			<div> 
-                <h1> Hello World</h1> 
-                <h3> Current Date and Time :: {this.state.date} </h3>
+			<div className="flex-item"> 
+                <h1>Virtual Dom</h1> 
+                <span> Current Date and Time :: {this.state.date} </span>
             </div>
         ); 
 	} 

@@ -25,7 +25,7 @@ export default class LazyLoader extends React.Component {
 
     render(){
         return (
-            <div>
+            <div className="flex-item">
                 {
                     this.state.load ?
                     <Suspense fallback={<div>Loading...</div>}>
@@ -33,7 +33,7 @@ export default class LazyLoader extends React.Component {
                     </Suspense> : null
 
                 }
-                <button onClick={this.handleOnClickBtn}>Load Component</button>
+                <button className="btn btn-info" onClick={this.handleOnClickBtn}>Load Component</button>
             </div>
         )
     }

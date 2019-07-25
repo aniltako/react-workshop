@@ -3,8 +3,8 @@ import React from 'react';
 class AsyncComponent extends React.Component {
     render () {
         return(
-            <div>
-                <h3>This is AsyncComponent.</h3>
+            <div className="flex-item">
+                <h3>Lazy Component</h3>
             </div>
         )
     }

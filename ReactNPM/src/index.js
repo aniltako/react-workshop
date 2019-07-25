@@ -6,14 +6,20 @@ import ComponentsProps from './ComponentsProps';
 import HotReload from './HotReload';
 import PTypes from './PTypes';
 import LazyLoader from './LazyLoader';
+import VirtualDom from './VirtualDom';
+import HandleEvent from './HandleEvents'
+import './style.css';
+
 class App extends React.Component{
     render(){
         return(
-            <div>Hello World!!!!</div>
+            <div>Welcome to React!!!!</div>
         )
     }
 }
 
 ReactDOM.render(
-    <LazyLoader />
+    <div className="flex-container">
+        <HandleEvent />
+    </div>
 , document.getElementById('root'));

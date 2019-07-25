@@ -4,20 +4,38 @@ export default class HandleEvent extends React.Component {
 	constructor(props) {
 		super(props); 
         this.state = {
-            name: String
+            toggle: false,
+            mouseOut: false
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
+
+        this.handleOnBtnClick = this.handleOnBtnClick.bind(this);
+        this.handleOnMouseOver = this.handleOnMouseOver.bind(this);
+        this.handleOnMouseOut = this.handleOnMouseOut.bind(this);
 	}  
 
-    handleInputChange (e) {
-        this.setState({name: e.target.value})
+    handleOnBtnClick () {
+        this.setState({toggle: !this.state.toggle});
+    }
+
+    handleOnMouseOver () {
+        this.setState({mouseOut: false});
+    }
+
+    handleOnMouseOut () {
+        this.setState({mouseOut: true});
     }
 
    	render() { 
 		return ( 
-			<div> 
-                <h1>Name</h1> 
-                <input value="" onChange={this.handleInputChange}/>
+			<div className="flex-item"> 
+                <div className="card" onMouseOver={this.handleOnMouseOver}  
+                    onMouseOut={this.handleOnMouseOut}>
+                    <p className="title">HandleEvent</p>
+                    <span>{this.state.mouseOut ? 'Mouse Out' : 'Mouse Over'}</span><br/>
+                    <button className="btn btn-success" onClick={this.handleOnBtnClick}>
+                        Toggle {this.state.toggle ? "ON" : "OFF"}
+                    </button>
+                </div>
             </div>
         ); 
 	} 
