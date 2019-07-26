@@ -7,14 +7,14 @@ export class HelloTest extends React.Component {
    	render() { 
 		return ( 
 			<div>
-                <Hello name="World"/> 
+                <HelloWorld name="World"/> 
                 <CurrentDateTime />
             </div>
         ); 
 	} 
 }
 
-export function Hello (props) {
+export function HelloWorld (props) {
 	return <h1> Hello {props.name}</h1>;
 }
 

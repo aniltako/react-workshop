@@ -9,6 +9,7 @@ import LazyLoader from './LazyLoader';
 import VirtualDom from './VirtualDom';
 import HandleEvent from './HandleEvents'
 import './style.css';
+import TodoList from './TodoList';
 
 class App extends React.Component{
     render(){
@@ -20,6 +21,6 @@ class App extends React.Component{
 
 ReactDOM.render(
     <div className="flex-container">
-        <HandleEvent />
+        <TodoList />
     </div>
 , document.getElementById('root'));
