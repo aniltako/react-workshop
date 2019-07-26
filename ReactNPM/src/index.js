@@ -10,6 +10,7 @@ import VirtualDom from './VirtualDom';
 import HandleEvent from './HandleEvents'
 import './style.css';
 import TodoList from './TodoList';
+import Binding from './Binding';
 
 class App extends React.Component{
     render(){
@@ -21,6 +22,6 @@ class App extends React.Component{
 
 ReactDOM.render(
     <div className="flex-container">
-        <TodoList />
+        <Binding />
     </div>
 , document.getElementById('root'));
